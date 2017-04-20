@@ -1,6 +1,6 @@
 
 $('document').ready(function(){
 
-document.getElementById('navbar').innerHTML = " hii <nav>NAAAV</nav>";
+document.getElementById('navbar').innerHTML = "<nav>NAAAV</nav>";
 
 });
