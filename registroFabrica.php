@@ -22,12 +22,17 @@ if (!$conexion) {
 
 $subs_modelo = utf8_decode($_POST['modelo']); // Coge los datos del formulario a partir de los NAME de los inputs
 $subs_marca = utf8_decode($_POST['marca']);
+$subs_motor = utf8_decode($_POST['motor']);
+$subs_combustible = utf8_decode($_POST['combustible']);
+$subs_precio = utf8_decode($_POST['precio']);
+$subs_color = utf8_decode($_POST['color']);
  
 $resultado=mysql_query("SELECT * FROM ".$tabla." WHERE Modelo = '".$subs_modelo."'", $conexion);
  
 	//INSERT! 
-	$sentencia_insert = 'INSERT INTO `' . $bd . '`.`'.$tabla.'` (`Modelo` , `Marca`) VALUES ("' . $subs_modelo . '", "' . $subs_marca . '")';
+	$sentencia_insert = 'INSERT INTO `' . $bd . '`.`'.$tabla.'` (`Modelo` , `Marca`, `Motor`, `Combustible`, `Precio` , `Color` ) VALUES ("' . $subs_modelo . '", "' . $subs_marca . '","' . $subs_motor . '", "' . $subs_combustible . '","' . $subs_precio . '", "' . $subs_color. '")';
  
+
 mysql_select_db($bd, $conexion);
 $returns = mysql_query($sentencia_insert, $conexion);
  

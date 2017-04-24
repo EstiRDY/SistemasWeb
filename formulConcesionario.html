@@ -25,16 +25,18 @@
 
     <div class="row">
     <!--Se llama al ""servlet"" php igual que en java, con action y method-->
-    <form class="col s12 l8 offset-l2" action="registroFabrica.php" method="post">
+    <form class="col s12 l8 offset-l2" action="probandoalert.php" method="get">
       <div class="row">
+
       <!--Marca-->
         <div class="input-field col s6">
-          <input name="marca" id="marca" type="text" class="validate">
+          <input name="marca" id="marca" type="text" class="validate" required>
           <label for="marca">Marca</label>
         </div>
+
       <!--Modelo-->
         <div class="input-field col s6">
-          <input name="modelo" id="modelo" type="text" class="validate">
+          <input name="modelo" id="modelo" type="text" class="validate" required>
           <label for="modelo">Modelo</label>
         </div>
       </div>
@@ -42,7 +44,7 @@
       <!--Precio-->
       <div class="row">
         <div class="input-field col s12">
-          <input id="precio" name="precio" type="text" class="validate">
+          <input id="precio" name="precio" type="text" class="validate" disabled>
           <label for="precio">Precio</label>
         </div>
       </div>
@@ -50,17 +52,28 @@
       <!--Potencia-->
       <div class="row">
           <div class="input-field col s6">
-          <input id="motor" name="motor" type="text" class="validate">
-          <label for="motor">Motor</label>
+          <select class="icons" name="motor">
+              <option value="" disabled selected>Potencia</option>
+              <option value="50 cv" class="left circle">50 cv</option>
+              <option value="3" class="left circle">example 2</option>
+              <option value="4" class="left circle">example 3</option>
+            </select>
         </div>
       </div>
-  
+
+     <!--Combustible-->
       <div class="row">
         <div class="input-field col s12">
-          <input id="combustible" name="combustible" type="text" class="validate">
-          <label for="comustible">Combustible</label>
+          <select class="icons" name="combustible">
+              <option value="" disabled selected>Combustible</option>
+              <option value="gasoil" class="left circle">gasoil</option>
+              <option value="gasolina" class="left circle">gasolina</option>
+              <option value="diesel" class="left circle">diesel</option>
+            </select>
         </div>
       </div>
+
+      <!--Color-->
       <div class="row">
         <div class="input-field col s12 m6 l8">
             <select class="icons" name="color">
@@ -71,7 +84,7 @@
             </select>
          </div>
       </div>
-      <button type="submit">ENVIAR</button>
+      <button type="submit"> ENVIAR </button>
     </form>
   </div>
   </body>
